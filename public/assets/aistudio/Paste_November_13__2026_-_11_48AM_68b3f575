@@ -1,0 +1,2126 @@
+<!-- Trek Details & Trail Telemetry -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#dce4e1","primary-fixed":"#ffdbd0","on-primary-container":"#541400","surface-dim":"#0d1513","surface-container":"#19211f","background":"#0d1513","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c","tertiary-fixed-dim":"#7bd0ff","outline-variant":"#5b4038","surface-bright":"#333b38","on-tertiary-fixed-variant":"#004c69","surface-tint":"#ffb59e","on-secondary-fixed-variant":"#005236","on-primary-fixed-variant":"#852400","on-tertiary":"#00354a","surface-container-low":"#151d1b","inverse-on-surface":"#2a3230","surface-container-highest":"#2e3634","on-background":"#dce4e1","primary":"#ffb59e","secondary":"#4edea3","on-secondary-container":"#00311f","on-tertiary-container":"#002f42","outline":"#ab897f","error":"#ffb4ab","on-secondary":"#003824","on-primary":"#5e1700","surface-container-lowest":"#08100e","surface":"#0d1513","primary-container":"#ff5a1f","tertiary-container":"#009dd3","tertiary":"#7bd0ff","on-surface":"#dce4e1","on-primary-fixed":"#3a0b00","primary-fixed-dim":"#ffb59e","on-error":"#690005","on-surface-variant":"#e4beb3","secondary-fixed-dim":"#4edea3","inverse-primary":"#ae3200","surface-variant":"#2e3634","secondary-container":"#00a572","on-secondary-fixed":"#002113","secondary-fixed":"#6ffbbe","surface-container-high":"#232c29","on-error-container":"#ffdad6","error-container":"#93000a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-md":"1rem","gutter-lg":"2rem",gutter:"1rem","margin-lg":"2.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-md":"1.5rem","gutter-md":"1.5rem","space-xl":"2.5rem",margin:"1rem"},fontFamily:{"metric-display-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-sm":["Hanken Grotesk"],"label-mono":["JetBrains Mono"],"label-mono-sm":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"body-lg":["Hanken Grotesk"],"metric-display":["Space Grotesk"],"body-md":["Hanken Grotesk"]},fontSize:{"metric-display-mobile":["28px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-mono":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"500"}],"label-mono-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"500"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"metric-display":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 w-full px-gutter-md flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="PeakTrack Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA5AR08hAbiV2VP6yisfIriAsx0l1LImM-NQ1UEt0g9g8Db1xopiOR4RmWR9iXlOQWbzQPI5j1Mgf0GSn2PSu12O2msJSsr4vLe0zWPr2EMelOmuuNO4653Ib_7stBpggfCDG5AzJ4833NG591keTQ_pH3oZknjoDl7MyMoIi0258mg9MUMru1i4qMVCylhWtvlfJflWC0M5VK15XFNCmnUQZCG573gHCPCZ3v5rE_i1Q"/><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface select-none">PeakTrack</span><div class="hidden xl:flex items-center gap-space-xs ml-space-sm pl-space-md bg-surface-container-low px-space-sm py-1 rounded"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase">GNSS 3D Lock</span></div></div><div class="flex-1 max-w-md mx-space-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-lg pointer-events-none select-none">travel_explore</span><input class="w-full bg-surface-container-low pl-10 pr-space-md py-1.5 rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search trails, summits, coordinates, or GPX tracks..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded"><span class="material-symbols-outlined text-tertiary text-lg">air</span><div class="flex flex-col"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Ridge Base 2,840m</span><span class="font-label-mono text-label-mono text-on-surface">12°C · NW 24kt</span></div></div><div class="flex items-center gap-space-sm"><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors rounded" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors rounded" type="button"><span class="material-symbols-outlined text-xl">tune</span></button><div class="flex items-center gap-space-xs ml-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9TTV-V1Cd1O1NK9ad8qeLrGRKkqjSJ-dtlfp8R-5YSJI5TyCKJjbXzHYHjkcPuORMmtbQVc8fDX2EsKf802vTARGaNH1yIbzpfHTMIIlOW97NbuKgE9sTL62uUg_pQAJzyZsJL3B6ti_X7vNwbj18EiRQq2Z9OZLVdmmaksZCgdlgap904oryESi1Ok-t-NXWK7vIUrNC9nGZHvutaswYBdgLt9GZa2Rjkn_M7H2G"/><span class="hidden sm:inline-block font-label-mono text-label-mono text-on-surface font-semibold">ALPHA-1</span></div></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-low z-40 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant px-space-sm tracking-wider">Telemetry HUD</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded" data-path="live-telemetry" href="#"><span class="material-symbols-outlined text-lg">monitoring</span><span>Live Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="explore-trails" href="#"><span class="material-symbols-outlined text-lg">terrain</span><span>Explore Trails</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="activity-log" href="#"><span class="material-symbols-outlined text-lg">history_toggle_off</span><span>Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="route-planner" href="#"><span class="material-symbols-outlined text-lg">polyline</span><span>Route Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="gear" href="#"><span class="material-symbols-outlined text-lg">backpack</span><span>Gear</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="community" href="#"><span class="material-symbols-outlined text-lg">groups</span><span>Community</span></a></nav></div><div class="flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant px-space-sm tracking-wider">Active Session</span><div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">WAYPOINT 04</span><span class="font-label-mono-sm text-label-mono-sm text-secondary">IN RANGE</span></div><span class="font-headline-md text-body-md text-on-surface font-semibold truncate">Mt. Sentinel Spine</span><div class="flex justify-between items-baseline pt-space-xs"><span class="font-label-mono text-label-mono text-primary">▲ 1,842m</span><span class="font-label-mono text-label-mono text-on-surface-variant">+420m / 3.4km</span></div></div></div></div><div class="pt-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm text-on-surface-variant"><span class="font-label-mono-sm text-label-mono-sm uppercase">Battery · Transponder</span><span class="font-label-mono-sm text-label-mono-sm text-secondary">92%</span></div><div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden"><div class="bg-secondary h-full w-[92%]"></div></div></div></aside><div class="pl-64"><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Top Alert & Realtime Satellite Bar -->
+<div class="w-full bg-surface-container-lowest px-gutter-md py-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-widest font-semibold">Active Sector: Sector 09 Patagonian Cordillera</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Live Mesh Relays: 4 Station Synced</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">wb_twilight</span>
+        Civil Dusk: <strong class="text-on-surface font-semibold">19:42 (-02h 14m)</strong>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">satellite_alt</span>
+        QZSS / Galileo: <strong class="text-on-surface font-semibold">14 Sats (0.8m HDOP)</strong>
+</span>
+</div>
+</div>
+<div class="p-gutter-md flex flex-col gap-space-lg">
+<!-- 1. Trek / Trail Header -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-xl flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm rounded uppercase tracking-wider">Trek Route ID: PT-FTZ-902</span>
+<span class="px-space-sm py-1 bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold rounded uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span> Hard / Alpine Grade IV
+          </span>
+<span class="px-space-sm py-1 bg-secondary-container/20 text-secondary font-label-mono-sm text-label-mono-sm font-semibold rounded uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Trail Status: Open &amp; Clear
+          </span>
+<span class="px-space-sm py-1 bg-surface-container text-tertiary font-label-mono-sm text-label-mono-sm rounded uppercase">
+            Pass Open until 18:30
+          </span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-space-md mt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Fitz Roy High Pass Circuit</h1>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-medium">Los Glaciares National Park, Santa Cruz</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono text-label-mono rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export GPX</span>
+</button>
+<button class="px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono text-label-mono rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">offline_pin</span>
+<span>Cache Map Offline</span>
+</button>
+<button class="px-space-lg py-2.5 bg-primary-container hover:brightness-110 text-on-primary-container font-label-mono text-label-mono font-bold rounded flex items-center gap-space-xs shadow-md shadow-primary-container/20 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+<span>Start Realtime Track</span>
+</button>
+</div>
+</div>
+<!-- 2. Key Waypoint & Route Summary Banner -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Start Point:</span>
+<span class="font-label-mono text-label-mono text-primary font-semibold">El Chaltén Trailhead</span>
+</div>
+<span class="text-surface-bright">➔</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Destination:</span>
+<span class="font-label-mono text-label-mono text-secondary font-semibold">Laguna de los Tres Basecamp</span>
+</div>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-tertiary">alt_route</span>
+          Total Route Span: 4 Segmented Milestones • Technical Class: Alpine Scree
+        </div>
+</div>
+<!-- Route Interactive Waypoint Ribbon -->
+<div class="relative w-full pt-space-xs pb-space-sm overflow-x-auto">
+<div class="min-w-[700px] flex items-center justify-between relative px- space-md">
+<!-- Background track line -->
+<div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-1 bg-surface-container-highest rounded"></div>
+<!-- Progress line up to checkpoint 2 -->
+<div class="absolute left-6 w-[58%] top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary-container to-secondary rounded"></div>
+<!-- Waypoint 1: Start -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-between justify-center font-label-mono text-label-mono font-bold shadow-lg shadow-primary-container/30">
+<span class="material-symbols-outlined text-base">flag</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Start: El Chaltén</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">0.0 km • 420m</span>
+</div>
+<!-- Waypoint 2: Mirador Capri -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center font-label-mono text-label-mono font-bold">
+<span class="material-symbols-outlined text-base">visibility</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Mirador Capri</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">4.8 km • 780m (Passed)</span>
+</div>
+<!-- Waypoint 3: Poincenot Camp -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-primary text-primary flex items-center justify-center font-label-mono text-label-mono font-bold animate-pulse">
+<span class="material-symbols-outlined text-base">cabin</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold mt-2">Poincenot Camp</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">12.3 km • 1,120m (Current)</span>
+</div>
+<!-- Waypoint 4: Moraine Summit Ridge -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-base">landscape</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Ridge Pass Step</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">17.6 km • 1,840m</span>
+</div>
+<!-- Waypoint 5: Destination -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant text-tertiary flex items-center justify-center font-label-mono text-label-mono font-bold">
+<span class="material-symbols-outlined text-base">terrain</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Destination: Laguna Tres</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">21.4 km • 2,140m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Primary Telemetry Stat Cards Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Distance Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Total Distance</span>
+<span class="material-symbols-outlined text-base text-primary">straighten</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">21.4</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">km</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">▲ 12.3 km done</span>
+<span class="text-on-surface-variant">9.1 km rem.</span>
+</div>
+</div>
+<!-- Elevation Gain Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Elevation Gain</span>
+<span class="material-symbols-outlined text-base text-secondary">trending_up</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-secondary tracking-tight">+1,480</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">m</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Grade Max: 28%</span>
+<span class="text-primary font-medium">Slope Step IV</span>
+</div>
+</div>
+<!-- Trek Duration Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Trek Duration</span>
+<span class="material-symbols-outlined text-base text-tertiary">timer</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">6h 45m</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Moving: 05:42</span>
+<span class="text-tertiary">Rest: 01:03</span>
+</div>
+</div>
+<!-- Average Pace Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Average Pace</span>
+<span class="material-symbols-outlined text-base text-primary">speed</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">3.2</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">km/h</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">Current: 2.8 km/h</span>
+<span class="text-on-surface-variant">Split: 18:45</span>
+</div>
+</div>
+<!-- Highest Altitude Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Highest Altitude</span>
+<span class="material-symbols-outlined text-base text-primary-container">mountain_flag</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-primary tracking-tight">2,140</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">m ASL</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Base: 420m</span>
+<span class="text-on-surface font-semibold">Δ +1,720m net</span>
+</div>
+</div>
+<!-- Calories Burned Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Calories Burned</span>
+<span class="material-symbols-outlined text-base text-primary">local_fire_department</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">2,640</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">kcal</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">390 kcal/hr</span>
+<span class="text-on-surface-variant">HR avg 142 bpm</span>
+</div>
+</div>
+</div>
+<!-- Weather & Atmosphere Micro-Bar -->
+<div class="bg-surface-container-high px-space-md py-space-sm rounded-lg flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-xl text-tertiary">partly_cloudy_day</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-mono text-headline-md text-on-surface font-bold">8°C</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">(Feels like 5°C)</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm rounded">Part-Cloudy</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-lg text-on-surface-variant">
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">air</span>
+          Wind: <span class="text-on-surface font-semibold">24 km/h WNW (Gusts 38)</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-primary">wb_sunny</span>
+          UV Index: <span class="text-primary font-semibold">4 Moderate</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-secondary">water_drop</span>
+          Humidity: <span class="text-on-surface font-semibold">58%</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">compress</span>
+          Atm. Pressure: <span class="text-on-surface font-semibold">782 hPa (Thin Air)</span>
+</div>
+</div>
+</div>
+<!-- 4. Central Interactive Route Map Shape & Topographic Visualizer + Side Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Main Topo Map Canvas (8 Columns) -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl shadow-xl p-space-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Map Viewport Top HUD Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm z-20">
+<div class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-secondary">radar</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-semibold">Route Map Shape Visualizer</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Vectors Active</span>
+</div>
+<!-- Controls Button Group -->
+<div class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md p-1 rounded">
+<button class="px-2.5 py-1 bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-colors" id="toggle-topo">
+<span class="material-symbols-outlined text-sm">terrain</span> Topo Contours
+            </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-colors" id="toggle-3d">
+<span class="material-symbols-outlined text-sm">view_in_ar</span> 3D Elev
+            </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-colors" id="toggle-sat">
+<span class="material-symbols-outlined text-sm">satellite</span> Satellite Layer
+            </button>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded" title="Compass Reset">
+<span class="material-symbols-outlined text-sm">explore</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded" title="Fullscreen">
+<span class="material-symbols-outlined text-sm">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Topographic Map Canvas with Vector Route & Waypoint Hover Nodes -->
+<div class="relative w-full h-[460px] bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center select-none group">
+<!-- Topographic Contour Lines SVG Layer -->
+<svg class="absolute inset-0 w-full h-full opacity-35" preserveaspectratio="none" viewbox="0 0 800 500">
+<defs>
+<pattern height="40" id="grid-pattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#293B36" stroke-dasharray="2,2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+<!-- Contour rings -->
+<path d="M-50,200 C150,180 200,80 400,90 C600,100 650,20 850,50" fill="none" opacity="0.3" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,250 C180,220 220,120 420,140 C620,160 670,60 850,90" fill="none" opacity="0.4" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,310 C160,280 240,170 460,180 C680,190 700,100 850,140" fill="none" opacity="0.5" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,380 C120,340 300,220 500,240 C700,260 740,160 850,200" fill="none" opacity="0.3" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,450 C200,420 320,300 520,310 C720,320 780,220 850,260" fill="none" opacity="0.25" stroke="#4edea3" stroke-width="0.75"></path>
+<!-- Summit Peak Ridge Concentric Rings (Mount Fitz Roy Region) -->
+<ellipse cx="640" cy="130" fill="none" opacity="0.4" rx="90" ry="50" stroke="#ffb59e" stroke-width="0.8"></ellipse>
+<ellipse cx="640" cy="130" fill="none" opacity="0.6" rx="65" ry="35" stroke="#ffb59e" stroke-width="0.9"></ellipse>
+<ellipse cx="640" cy="130" fill="none" opacity="0.8" rx="40" ry="20" stroke="#ff5a1f" stroke-width="1.2"></ellipse>
+<ellipse cx="640" cy="130" fill="#ff5a1f" opacity="0.4" rx="15" ry="8"></ellipse>
+<!-- Glacial Lake (Laguna de los Tres) Basin outline -->
+<path d="M660,170 C700,160 740,180 735,210 C730,230 680,240 655,225 C640,210 645,185 660,170 Z" fill="#009dd3" fill-opacity="0.25" stroke="#7bd0ff" stroke-width="1.2"></path>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="9" letter-spacing="1" x="665" y="205">LAGUNA DE LOS TRES</text>
+<!-- Vector Route Path Geometry -->
+<!-- Path segments: Trailhead (60,420) -> 5km (190,340) -> Mirador Capri/10km (340,270) -> Poincenot/15km (480,230) -> Mountain Pass Col/20km (610,165) -> Destination (670,145) -->
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230 T610,165 L670,145" fill="none" id="route-vector-glow" opacity="0.2" stroke="#ff5a1f" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230 T610,165 L670,145" fill="none" id="route-vector-main" stroke="#ff5a1f" stroke-dasharray="7,3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Active completed trail trail trace in emerald -->
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230" fill="none" stroke="#4edea3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path>
+</svg>
+<!-- Interactive Waypoint & Kilometre Markers on Top of SVG Canvas -->
+<!-- START [Start] -->
+<div class="absolute left-[7.5%] top-[84%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node" id="node-start">
+<div class="w-6 h-6 rounded-full bg-secondary text-surface-container-lowest flex items-center justify-center font-bold text-xs shadow-[0_0_12px_rgba(78,222,163,0.8)]">
+              S
+            </div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-8 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded shadow-lg pointer-events-none min-w-[130px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold uppercase">Start: El Chaltén</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 420m • 0.0 km</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">[Start] 420m</span>
+</div>
+<!-- 5KM Marker -->
+<div class="absolute left-[24%] top-[68%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2 py-1 rounded shadow-lg pointer-events-none min-w-[110px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">5.0 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 610m • Split: 52m</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">5 km</span>
+</div>
+<!-- Water Spring Marker -->
+<div class="absolute left-[31%] top-[59%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-5 h-5 rounded-full bg-tertiary-container/30 border border-tertiary text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">water_drop</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-7 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[130px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold uppercase">Spring Water Point</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Potable • 740m Elev</span>
+</div>
+</div>
+<!-- 10KM Marker / Mirador Capri -->
+<div class="absolute left-[42.5%] top-[54%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[120px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">10 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 980m • Good View</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">10 km</span>
+</div>
+<!-- 15KM Marker / Poincenot Active Position -->
+<div class="absolute left-[60%] top-[46%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="relative">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_16px_rgba(255,90,31,0.8)]">
+<span class="material-symbols-outlined text-xs">my_location</span>
+</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<div class="flex flex-col items-center absolute bottom-8 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded shadow-lg pointer-events-none min-w-[140px] z-30 border-b-2 border-primary">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold uppercase">LIVE: Poincenot Camp</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">15.0 km • Elev: 1,120m</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Hiker: Alpha-1 Active</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">15 km (Camp)</span>
+</div>
+<!-- Mountain Pass Col Marker -->
+<div class="absolute left-[71%] top-[38%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-5 h-5 rounded-full bg-error-container/30 border border-error text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">priority_high</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-7 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[140px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-error font-bold uppercase">Mountain Pass Col</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Max Incline 28% • 1,690m</span>
+</div>
+</div>
+<!-- 20KM Marker -->
+<div class="absolute left-[76.2%] top-[33%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-outline-variant text-on-surface-variant flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2 py-1 rounded shadow-lg pointer-events-none min-w-[110px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-bold">20 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Elev: 1,940m • Scree</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">20 km</span>
+</div>
+<!-- DESTINATION [End] -->
+<div class="absolute left-[83.7%] top-[29%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node" id="node-destination">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs shadow-[0_0_16px_rgba(0,157,211,0.6)]">
+<span class="material-symbols-outlined text-sm">flag_circle</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-9 bg-surface/95 backdrop-blur-md px-3 py-1.5 rounded shadow-lg pointer-events-none min-w-[160px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold uppercase">Destination [End]</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Laguna de los Tres: 2,140m</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Distance: 21.4 km</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">[End] 2,140m</span>
+</div>
+<!-- Realtime Live Trackers Floating Badge (Bottom-Right overlay) -->
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-lg px-space-md py-space-xs rounded-lg shadow-lg flex items-center gap-space-md z-20">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase font-bold">14 Live Trackers on Trail</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">3 Search &amp; Rescue Rangers</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-secondary font-label-mono-sm text-label-mono-sm font-semibold rounded">SAFETY GRID SECURE</span>
+</div>
+<!-- Bottom-Left Map Scale Legend -->
+<div class="absolute bottom-4 left-4 bg-surface/85 backdrop-blur-md px-space-sm py-1 rounded flex items-center gap-space-sm z-20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Scale: 1:25,000</span>
+<div class="w-16 h-1 bg-on-surface-variant relative flex items-center justify-between">
+<div class="w-0.5 h-2 bg-on-surface-variant -top-0.5"></div>
+<div class="w-0.5 h-2 bg-on-surface-variant -top-0.5"></div>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">2 km</span>
+</div>
+</div>
+</div>
+<!-- 6. Surface & Terrain Breakdown + Gear Checklist sidebar (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Terrain Distribution & Notes Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Surface &amp; Terrain Dynamics</span>
+<span class="material-symbols-outlined text-base text-secondary">layers</span>
+</div>
+<!-- Multi-segment progress bar for terrain breakdown -->
+<div class="flex flex-col gap-space-xs">
+<div class="h-3 w-full rounded overflow-hidden flex bg-surface-container-highest">
+<div class="bg-primary h-full w-[42%]" title="42% Rocky scree"></div>
+<div class="bg-secondary h-full w-[35%]" title="35% Alpine singletrack"></div>
+<div class="bg-tertiary h-full w-[23%]" title="23% Glacial moraine"></div>
+</div>
+<div class="grid grid-cols-3 text-center pt-1 font-label-mono-sm text-label-mono-sm">
+<div class="flex flex-col items-center">
+<span class="text-primary font-bold">42% Scree</span>
+<span class="text-on-surface-variant">Loose rock</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-secondary font-bold">35% Singletrack</span>
+<span class="text-on-surface-variant">Forest trail</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-tertiary font-bold">23% Moraine</span>
+<span class="text-on-surface-variant">Ice &amp; Granite</span>
+</div>
+</div>
+</div>
+<!-- Trail Condition Live Feed -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">campaign</span> Ranger Station Notice
+              </span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">14m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High winds exceeding 45km/h reported at final 1.2km moraine ascent. Trekking poles and crampons advised beyond waypoint 04. Water source at Rio Blanco verified 100% active and potable.
+            </p>
+</div>
+<!-- Sun & Twilight Timer -->
+<div class="flex items-center justify-between px-space-xs pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-lg text-primary">wb_twilight</span>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Sunset Lock</span>
+<span class="font-label-mono text-label-mono text-on-surface font-bold">19:42 UTC-3</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm rounded">
+              02h 14m daylight remaining
+            </span>
+</div>
+</div>
+<!-- Alpine Gear Checklist & Readiness Panel -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Essential Gear Status</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">6/6 VERIFIED</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Microspikes / Crampons</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Packed</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Carbon Trekking Poles</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">In Hand</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Emergency Bivy &amp; Satellite Beacon</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Armed</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface">Thermal Shell (3-Layer Gore-Tex)</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-medium">Equipped</span>
+</div>
+</div>
+<!-- In-transit Emergency Hotkey -->
+<div class="mt-auto pt-space-xs">
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm font-semibold rounded flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-sm">sos</span>
+<span>Trigger Offline Emergency Protocol</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Dynamic Elevation Profile Chart -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg">area_chart</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-bold">Dynamic Elevation Profile (400m to 2,140m ASL)</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Hover profile to scrub telemetry</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Traversed Segment</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface">Remaining Incline</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-error"></span>
+<span class="text-error font-semibold">Max Incline: 28%</span>
+</div>
+</div>
+</div>
+<!-- SVG Area Chart -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg p-space-sm overflow-hidden select-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 200">
+<defs>
+<!-- Emerald traversed gradient -->
+<lineargradient id="traversed-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Orange pending gradient -->
+<lineargradient id="pending-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ff5a1f" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#ff5a1f" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Elevation Horizontal Guides -->
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="20" y2="20"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="24">2,140m (Summit)</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="75" y2="75"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="79">1,600m</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="130" y2="130"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="134">1,000m</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="185" y2="185"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="189">400m (Base)</text>
+<!-- Traversed Area (0 to 12.3km = 0 to 575 in X) -->
+<path d="M 0,185 L 120,175 L 225,150 L 320,135 L 420,120 L 520,110 L 575,105 L 575,195 L 0,195 Z" fill="url(#traversed-grad)"></path>
+<path d="M 0,185 L 120,175 L 225,150 L 320,135 L 420,120 L 520,110 L 575,105" fill="none" stroke="#4edea3" stroke-width="2.5"></path>
+<!-- Remaining Area (12.3km to 21.4km = 575 to 1000 in X) -->
+<!-- Steep ascent around 800 to 950 (Steepest grade section) -->
+<path d="M 575,105 L 680,95 L 780,80 L 860,35 L 940,22 L 1000,20 L 1000,195 L 575,195 Z" fill="url(#pending-grad)"></path>
+<path d="M 575,105 L 680,95 L 780,80 L 860,35 L 940,22 L 1000,20" fill="none" stroke="#ff5a1f" stroke-dasharray="4,2" stroke-width="2.5"></path>
+<!-- Highlight: Steepest Grade Section Zone (between 780 and 880) -->
+<rect fill="#93000a" fill-opacity="0.12" height="170" rx="4" width="120" x="760" y="25"></rect>
+<line stroke="#ffb4ab" stroke-dasharray="2,2" stroke-width="0.75" x1="820" x2="820" y1="25" y2="195"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="825" y="45">MAX GRADE 28%</text>
+<text fill="#e4beb3" font-family="JetBrains Mono" font-size="8" x="825" y="58">Moraine Push</text>
+<!-- Current Position Scrubber Hairline at 575 (Poincenot Camp) -->
+<line stroke="#dce4e1" stroke-width="1.5" x1="575" x2="575" y1="15" y2="195"></line>
+<circle cx="575" cy="105" fill="#ff5a1f" r="5" stroke="#0d1513" stroke-width="2"></circle>
+<circle cx="575" cy="105" fill="none" opacity="0.6" r="8" stroke="#ff5a1f" stroke-width="1"></circle>
+<!-- Aid Stations / Camp Pins -->
+<!-- Mirador Capri -->
+<circle cx="225" cy="150" fill="#4edea3" r="3"></circle>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="8" x="232" y="153">Mirador Capri (780m)</text>
+<!-- Poincenot -->
+<text fill="#ffb59e" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="582" y="98">YOU ARE HERE (1,120m)</text>
+<!-- Summit Laguna de los Tres -->
+<circle cx="1000" cy="20" fill="#009dd3" r="4"></circle>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="8" x="910" y="16">Laguna Tres (2,140m)</text>
+</svg>
+<!-- Distance X-Axis Ticks -->
+<div class="absolute bottom-1 left-8 right-8 flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>0.0 km</span>
+<span>5.0 km</span>
+<span>10.0 km</span>
+<span class="text-primary font-bold">12.3 km (Current)</span>
+<span>17.0 km</span>
+<span class="text-tertiary font-bold">21.4 km</span>
+</div>
+</div>
+<!-- Elevation Profile Detailed Stat Callouts -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs font-label-mono text-label-mono">
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Ascent Rate:</span>
+<span class="text-secondary font-bold">+340 m/h</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Grade at Scrubber:</span>
+<span class="text-primary font-bold">14.2%</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Remaining Climb:</span>
+<span class="text-on-surface font-bold">+1,020 m</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Est. Summit Arrival:</span>
+<span class="text-tertiary font-bold">17:15 UTC-3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Map Layer Toggles for Interactive Feel
+  const topoBtn = document.getElementById('toggle-topo');
+  const satBtn = document.getElementById('toggle-sat');
+  const threeDBtn = document.getElementById('toggle-3d');
+
+  if (topoBtn && satBtn && threeDBtn) {
+    topoBtn.addEventListener('click', () => {
+      topoBtn.classList.toggle('bg-surface-container-highest');
+      topoBtn.classList.toggle('text-secondary');
+    });
+
+    satBtn.addEventListener('click', () => {
+      satBtn.classList.toggle('bg-surface-container-highest');
+      satBtn.classList.toggle('text-secondary');
+    });
+
+    threeDBtn.addEventListener('click', () => {
+      threeDBtn.classList.toggle('bg-surface-container-highest');
+      threeDBtn.classList.toggle('text-secondary');
+    });
+  }
+</script></main></div></body></html>
+
+<!-- Trek Details & 3D Terrain Telemetry -->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#dce4e1","primary-fixed":"#ffdbd0","on-primary-container":"#541400","surface-dim":"#0d1513","surface-container":"#19211f","background":"#0d1513","tertiary-fixed":"#c4e7ff","on-tertiary-fixed":"#001e2c","tertiary-fixed-dim":"#7bd0ff","outline-variant":"#5b4038","surface-bright":"#333b38","on-tertiary-fixed-variant":"#004c69","surface-tint":"#ffb59e","on-secondary-fixed-variant":"#005236","on-primary-fixed-variant":"#852400","on-tertiary":"#00354a","surface-container-low":"#151d1b","inverse-on-surface":"#2a3230","surface-container-highest":"#2e3634","on-background":"#dce4e1","primary":"#ffb59e","secondary":"#4edea3","on-secondary-container":"#00311f","on-tertiary-container":"#002f42","outline":"#ab897f","error":"#ffb4ab","on-secondary":"#003824","on-primary":"#5e1700","surface-container-lowest":"#08100e","surface":"#0d1513","primary-container":"#ff5a1f","tertiary-container":"#009dd3","tertiary":"#7bd0ff","on-surface":"#dce4e1","on-primary-fixed":"#3a0b00","primary-fixed-dim":"#ffb59e","on-error":"#690005","on-surface-variant":"#e4beb3","secondary-fixed-dim":"#4edea3","inverse-primary":"#ae3200","surface-variant":"#2e3634","secondary-container":"#00a572","on-secondary-fixed":"#002113","secondary-fixed":"#6ffbbe","surface-container-high":"#232c29","on-error-container":"#ffdad6","error-container":"#93000a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-md":"1rem","gutter-lg":"2rem",gutter:"1rem","margin-lg":"2.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-md":"1.5rem","gutter-md":"1.5rem","space-xl":"2.5rem",margin:"1rem"},fontFamily:{"metric-display-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-sm":["Hanken Grotesk"],"label-mono":["JetBrains Mono"],"label-mono-sm":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"body-lg":["Hanken Grotesk"],"metric-display":["Space Grotesk"],"body-md":["Hanken Grotesk"]},fontSize:{"metric-display-mobile":["28px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-mono":["12px",{lineHeight:"16px",letterSpacing:"0.06em",fontWeight:"500"}],"label-mono-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"500"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"metric-display":["40px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-primary selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 w-full px-gutter-md flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="PeakTrack Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA5AR08hAbiV2VP6yisfIriAsx0l1LImM-NQ1UEt0g9g8Db1xopiOR4RmWR9iXlOQWbzQPI5j1Mgf0GSn2PSu12O2msJSsr4vLe0zWPr2EMelOmuuNO4653Ib_7stBpggfCDG5AzJ4833NG591keTQ_pH3oZknjoDl7MyMoIi0258mg9MUMru1i4qMVCylhWtvlfJflWC0M5VK15XFNCmnUQZCG573gHCPCZ3v5rE_i1Q"/><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface select-none">PeakTrack</span><div class="hidden xl:flex items-center gap-space-xs ml-space-sm pl-space-md bg-surface-container-low px-space-sm py-1 rounded"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase">GNSS 3D Lock</span></div></div><div class="flex-1 max-w-md mx-space-md hidden md:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-lg pointer-events-none select-none">travel_explore</span><input class="w-full bg-surface-container-low pl-10 pr-space-md py-1.5 rounded font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search trails, summits, coordinates, or GPX tracks..." type="text"/></div></div><div class="flex items-center gap-space-md shrink-0"><div class="hidden lg:flex items-center gap-space-sm bg-surface-container-low px-space-sm py-1 rounded"><span class="material-symbols-outlined text-tertiary text-lg">air</span><div class="flex flex-col"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Ridge Base 2,840m</span><span class="font-label-mono text-label-mono text-on-surface">12°C · NW 24kt</span></div></div><div class="flex items-center gap-space-sm"><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors rounded" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors rounded" type="button"><span class="material-symbols-outlined text-xl">tune</span></button><div class="flex items-center gap-space-xs ml-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9TTV-V1Cd1O1NK9ad8qeLrGRKkqjSJ-dtlfp8R-5YSJI5TyCKJjbXzHYHjkcPuORMmtbQVc8fDX2EsKf802vTARGaNH1yIbzpfHTMIIlOW97NbuKgE9sTL62uUg_pQAJzyZsJL3B6ti_X7vNwbj18EiRQq2Z9OZLVdmmaksZCgdlgap904oryESi1Ok-t-NXWK7vIUrNC9nGZHvutaswYBdgLt9GZa2Rjkn_M7H2G"/><span class="hidden sm:inline-block font-label-mono text-label-mono text-on-surface font-semibold">ALPHA-1</span></div></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-container-low z-40 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant px-space-sm tracking-wider">Telemetry HUD</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded" data-path="live-telemetry" href="#"><span class="material-symbols-outlined text-lg">monitoring</span><span>Live Telemetry</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="explore-trails" href="#"><span class="material-symbols-outlined text-lg">terrain</span><span>Explore Trails</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="activity-log" href="#"><span class="material-symbols-outlined text-lg">history_toggle_off</span><span>Activity Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="route-planner" href="#"><span class="material-symbols-outlined text-lg">polyline</span><span>Route Planner</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="gear" href="#"><span class="material-symbols-outlined text-lg">backpack</span><span>Gear</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-sm text-body-sm" data-path="community" href="#"><span class="material-symbols-outlined text-lg">groups</span><span>Community</span></a></nav></div><div class="flex flex-col gap-space-xs"><span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant px-space-sm tracking-wider">Active Session</span><div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">WAYPOINT 04</span><span class="font-label-mono-sm text-label-mono-sm text-secondary">IN RANGE</span></div><span class="font-headline-md text-body-md text-on-surface font-semibold truncate">Mt. Sentinel Spine</span><div class="flex justify-between items-baseline pt-space-xs"><span class="font-label-mono text-label-mono text-primary">▲ 1,842m</span><span class="font-label-mono text-label-mono text-on-surface-variant">+420m / 3.4km</span></div></div></div></div><div class="pt-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm text-on-surface-variant"><span class="font-label-mono-sm text-label-mono-sm uppercase">Battery · Transponder</span><span class="font-label-mono-sm text-label-mono-sm text-secondary">92%</span></div><div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden"><div class="bg-secondary h-full w-[92%]"></div></div></div></aside><div class="pl-64"><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Top Alert & Realtime Satellite Bar -->
+<div class="w-full bg-surface-container-lowest px-gutter-md py-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-widest font-semibold">Active Sector: Sector 09 Patagonian Cordillera</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Live Mesh Relays: 4 Station Synced</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary">wb_twilight</span>
+        Civil Dusk: <strong class="text-on-surface font-semibold">19:42 (-02h 14m)</strong>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">satellite_alt</span>
+        QZSS / Galileo: <strong class="text-on-surface font-semibold">14 Sats (0.8m HDOP)</strong>
+</span>
+</div>
+</div>
+<div class="p-gutter-md flex flex-col gap-space-lg">
+<!-- 1. Trek / Trail Header -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-xl flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm rounded uppercase tracking-wider">Trek Route ID: PT-FTZ-902</span>
+<span class="px-space-sm py-1 bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold rounded uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span> Hard / Alpine Grade IV
+          </span>
+<span class="px-space-sm py-1 bg-secondary-container/20 text-secondary font-label-mono-sm text-label-mono-sm font-semibold rounded uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Trail Status: Open &amp; Clear
+          </span>
+<span class="px-space-sm py-1 bg-surface-container text-tertiary font-label-mono-sm text-label-mono-sm rounded uppercase">
+            Pass Open until 18:30
+          </span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-space-md mt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Fitz Roy High Pass Circuit</h1>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-medium">Los Glaciares National Park, Santa Cruz</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono text-label-mono rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export GPX</span>
+</button>
+<button class="px-space-md py-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-mono text-label-mono rounded flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">offline_pin</span>
+<span>Cache Map Offline</span>
+</button>
+<button class="px-space-lg py-2.5 bg-primary-container hover:brightness-110 text-on-primary-container font-label-mono text-label-mono font-bold rounded flex items-center gap-space-xs shadow-md shadow-primary-container/20 transition-all" type="button">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+<span>Start Realtime Track</span>
+</button>
+</div>
+</div>
+<!-- 2. Key Waypoint & Route Summary Banner -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Start Point:</span>
+<span class="font-label-mono text-label-mono text-primary font-semibold">El Chaltén Trailhead</span>
+</div>
+<span class="text-surface-bright">➔</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Destination:</span>
+<span class="font-label-mono text-label-mono text-secondary font-semibold">Laguna de los Tres Basecamp</span>
+</div>
+</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-tertiary">alt_route</span>
+          Total Route Span: 4 Segmented Milestones • Technical Class: Alpine Scree
+        </div>
+</div>
+<!-- Route Interactive Waypoint Ribbon -->
+<div class="relative w-full pt-space-xs pb-space-sm overflow-x-auto">
+<div class="min-w-[700px] flex items-center justify-between relative px- space-md">
+<!-- Background track line -->
+<div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-1 bg-surface-container-highest rounded"></div>
+<!-- Progress line up to checkpoint 2 -->
+<div class="absolute left-6 w-[58%] top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-primary-container to-secondary rounded"></div>
+<!-- Waypoint 1: Start -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-between justify-center font-label-mono text-label-mono font-bold shadow-lg shadow-primary-container/30">
+<span class="material-symbols-outlined text-base">flag</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Start: El Chaltén</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">0.0 km • 420m</span>
+</div>
+<!-- Waypoint 2: Mirador Capri -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center font-label-mono text-label-mono font-bold">
+<span class="material-symbols-outlined text-base">visibility</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Mirador Capri</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">4.8 km • 780m (Passed)</span>
+</div>
+<!-- Waypoint 3: Poincenot Camp -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-primary text-primary flex items-center justify-center font-label-mono text-label-mono font-bold animate-pulse">
+<span class="material-symbols-outlined text-base">cabin</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold mt-2">Poincenot Camp</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">12.3 km • 1,120m (Current)</span>
+</div>
+<!-- Waypoint 4: Moraine Summit Ridge -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-base">landscape</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Ridge Pass Step</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">17.6 km • 1,840m</span>
+</div>
+<!-- Waypoint 5: Destination -->
+<div class="relative z-10 flex flex-col items-center group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant text-tertiary flex items-center justify-center font-label-mono text-label-mono font-bold">
+<span class="material-symbols-outlined text-base">terrain</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold mt-2">Destination: Laguna Tres</span>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">21.4 km • 2,140m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Primary Telemetry Stat Cards Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Distance Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Total Distance</span>
+<span class="material-symbols-outlined text-base text-primary">straighten</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">21.4</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">km</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">▲ 12.3 km done</span>
+<span class="text-on-surface-variant">9.1 km rem.</span>
+</div>
+</div>
+<!-- Elevation Gain Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Elevation Gain</span>
+<span class="material-symbols-outlined text-base text-secondary">trending_up</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-secondary tracking-tight">+1,480</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">m</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Grade Max: 28%</span>
+<span class="text-primary font-medium">Slope Step IV</span>
+</div>
+</div>
+<!-- Trek Duration Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Trek Duration</span>
+<span class="material-symbols-outlined text-base text-tertiary">timer</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">6h 45m</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Moving: 05:42</span>
+<span class="text-tertiary">Rest: 01:03</span>
+</div>
+</div>
+<!-- Average Pace Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Average Pace</span>
+<span class="material-symbols-outlined text-base text-primary">speed</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">3.2</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">km/h</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">Current: 2.8 km/h</span>
+<span class="text-on-surface-variant">Split: 18:45</span>
+</div>
+</div>
+<!-- Highest Altitude Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Highest Altitude</span>
+<span class="material-symbols-outlined text-base text-primary-container">mountain_flag</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-primary tracking-tight">2,140</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">m ASL</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant">Base: 420m</span>
+<span class="text-on-surface font-semibold">Δ +1,720m net</span>
+</div>
+</div>
+<!-- Calories Burned Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">Calories Burned</span>
+<span class="material-symbols-outlined text-base text-primary">local_fire_department</span>
+</div>
+<div class="flex items-baseline gap-1 my-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">2,640</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">kcal</span>
+</div>
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-secondary">390 kcal/hr</span>
+<span class="text-on-surface-variant">HR avg 142 bpm</span>
+</div>
+</div>
+</div>
+<!-- Weather & Atmosphere Micro-Bar -->
+<div class="bg-surface-container-high px-space-md py-space-sm rounded-lg flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-xl text-tertiary">partly_cloudy_day</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-mono text-headline-md text-on-surface font-bold">8°C</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">(Feels like 5°C)</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-mono-sm text-label-mono-sm rounded">Part-Cloudy</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-lg text-on-surface-variant">
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">air</span>
+          Wind: <span class="text-on-surface font-semibold">24 km/h WNW (Gusts 38)</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-primary">wb_sunny</span>
+          UV Index: <span class="text-primary font-semibold">4 Moderate</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-secondary">water_drop</span>
+          Humidity: <span class="text-on-surface font-semibold">58%</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono-sm text-label-mono-sm">
+<span class="material-symbols-outlined text-sm text-tertiary">compress</span>
+          Atm. Pressure: <span class="text-on-surface font-semibold">782 hPa (Thin Air)</span>
+</div>
+</div>
+</div>
+<!-- 4. Central Interactive Route Map Shape & Topographic Visualizer + Side Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Main Topo Map Canvas (8 Columns) -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl shadow-xl p-space-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Map Viewport Top HUD Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm z-20">
+<div class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-sm text-secondary">radar</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-semibold">Route Map Shape Visualizer</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Vectors Active</span>
+</div>
+<!-- Controls Button Group -->
+<div class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md p-1 rounded">
+<button class="px-2.5 py-1 bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-colors" id="toggle-topo">
+<span class="material-symbols-outlined text-sm">terrain</span> Topo Contours
+            </button>
+<button class="px-2.5 py-1 bg-surface-container-high hover:bg-surface-container-highest text-tertiary border border-tertiary/40 font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-all shadow-[0_0_10px_rgba(123,208,255,0.15)] group" id="toggle-3d" title="Open Interactive 3D Elevation Terrain Preview [Key: 3]">
+<span class="material-symbols-outlined text-sm text-tertiary group-hover:rotate-12 transition-transform">view_in_ar</span>
+<span>3D Elev</span>
+<span class="hidden sm:inline-block px-1 py-0.2 bg-tertiary/20 text-tertiary font-label-mono-sm text-[9px] rounded ml-0.5">3</span>
+</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface font-label-mono-sm text-label-mono-sm rounded flex items-center gap-1 transition-colors" id="toggle-sat">
+<span class="material-symbols-outlined text-sm">satellite</span> Satellite Layer
+            </button>
+<div class="h-4 w-px bg-surface-container-highest mx-1"></div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded" title="Compass Reset">
+<span class="material-symbols-outlined text-sm">explore</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded" title="Fullscreen">
+<span class="material-symbols-outlined text-sm">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Topographic Map Canvas with Vector Route & Waypoint Hover Nodes -->
+<div class="relative w-full h-[460px] bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center select-none group">
+<!-- Topographic Contour Lines SVG Layer -->
+<svg class="absolute inset-0 w-full h-full opacity-35" preserveaspectratio="none" viewbox="0 0 800 500">
+<defs>
+<pattern height="40" id="grid-pattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#293B36" stroke-dasharray="2,2" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+<!-- Contour rings -->
+<path d="M-50,200 C150,180 200,80 400,90 C600,100 650,20 850,50" fill="none" opacity="0.3" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,250 C180,220 220,120 420,140 C620,160 670,60 850,90" fill="none" opacity="0.4" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,310 C160,280 240,170 460,180 C680,190 700,100 850,140" fill="none" opacity="0.5" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,380 C120,340 300,220 500,240 C700,260 740,160 850,200" fill="none" opacity="0.3" stroke="#4edea3" stroke-width="0.75"></path>
+<path d="M-50,450 C200,420 320,300 520,310 C720,320 780,220 850,260" fill="none" opacity="0.25" stroke="#4edea3" stroke-width="0.75"></path>
+<!-- Summit Peak Ridge Concentric Rings (Mount Fitz Roy Region) -->
+<ellipse cx="640" cy="130" fill="none" opacity="0.4" rx="90" ry="50" stroke="#ffb59e" stroke-width="0.8"></ellipse>
+<ellipse cx="640" cy="130" fill="none" opacity="0.6" rx="65" ry="35" stroke="#ffb59e" stroke-width="0.9"></ellipse>
+<ellipse cx="640" cy="130" fill="none" opacity="0.8" rx="40" ry="20" stroke="#ff5a1f" stroke-width="1.2"></ellipse>
+<ellipse cx="640" cy="130" fill="#ff5a1f" opacity="0.4" rx="15" ry="8"></ellipse>
+<!-- Glacial Lake (Laguna de los Tres) Basin outline -->
+<path d="M660,170 C700,160 740,180 735,210 C730,230 680,240 655,225 C640,210 645,185 660,170 Z" fill="#009dd3" fill-opacity="0.25" stroke="#7bd0ff" stroke-width="1.2"></path>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="9" letter-spacing="1" x="665" y="205">LAGUNA DE LOS TRES</text>
+<!-- Vector Route Path Geometry -->
+<!-- Path segments: Trailhead (60,420) -> 5km (190,340) -> Mirador Capri/10km (340,270) -> Poincenot/15km (480,230) -> Mountain Pass Col/20km (610,165) -> Destination (670,145) -->
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230 T610,165 L670,145" fill="none" id="route-vector-glow" opacity="0.2" stroke="#ff5a1f" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230 T610,165 L670,145" fill="none" id="route-vector-main" stroke="#ff5a1f" stroke-dasharray="7,3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Active completed trail trail trace in emerald -->
+<path d="M60,420 Q120,400 190,340 T340,270 T480,230" fill="none" stroke="#4edea3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path>
+</svg>
+<!-- Interactive Waypoint & Kilometre Markers on Top of SVG Canvas -->
+<!-- START [Start] -->
+<div class="absolute left-[7.5%] top-[84%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node" id="node-start">
+<div class="w-6 h-6 rounded-full bg-secondary text-surface-container-lowest flex items-center justify-center font-bold text-xs shadow-[0_0_12px_rgba(78,222,163,0.8)]">
+              S
+            </div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-8 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded shadow-lg pointer-events-none min-w-[130px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold uppercase">Start: El Chaltén</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 420m • 0.0 km</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">[Start] 420m</span>
+</div>
+<!-- 5KM Marker -->
+<div class="absolute left-[24%] top-[68%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2 py-1 rounded shadow-lg pointer-events-none min-w-[110px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">5.0 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 610m • Split: 52m</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">5 km</span>
+</div>
+<!-- Water Spring Marker -->
+<div class="absolute left-[31%] top-[59%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-5 h-5 rounded-full bg-tertiary-container/30 border border-tertiary text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">water_drop</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-7 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[130px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold uppercase">Spring Water Point</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Potable • 740m Elev</span>
+</div>
+</div>
+<!-- 10KM Marker / Mirador Capri -->
+<div class="absolute left-[42.5%] top-[54%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-secondary text-secondary flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[120px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">10 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Elev: 980m • Good View</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">10 km</span>
+</div>
+<!-- 15KM Marker / Poincenot Active Position -->
+<div class="absolute left-[60%] top-[46%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="relative">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_16px_rgba(255,90,31,0.8)]">
+<span class="material-symbols-outlined text-xs">my_location</span>
+</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<div class="flex flex-col items-center absolute bottom-8 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded shadow-lg pointer-events-none min-w-[140px] z-30 border-b-2 border-primary">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold uppercase">LIVE: Poincenot Camp</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">15.0 km • Elev: 1,120m</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Hiker: Alpha-1 Active</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">15 km (Camp)</span>
+</div>
+<!-- Mountain Pass Col Marker -->
+<div class="absolute left-[71%] top-[38%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-5 h-5 rounded-full bg-error-container/30 border border-error text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">priority_high</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-7 bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded shadow-lg pointer-events-none min-w-[140px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-error font-bold uppercase">Mountain Pass Col</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Max Incline 28% • 1,690m</span>
+</div>
+</div>
+<!-- 20KM Marker -->
+<div class="absolute left-[76.2%] top-[33%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node">
+<div class="w-4 h-4 rounded-full bg-surface-container-high border-2 border-outline-variant text-on-surface-variant flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-6 bg-surface/95 backdrop-blur-md px-2 py-1 rounded shadow-lg pointer-events-none min-w-[110px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-bold">20 KM MARK</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Elev: 1,940m • Scree</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium mt-1">20 km</span>
+</div>
+<!-- DESTINATION [End] -->
+<div class="absolute left-[83.7%] top-[29%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group/node" id="node-destination">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-xs shadow-[0_0_16px_rgba(0,157,211,0.6)]">
+<span class="material-symbols-outlined text-sm">flag_circle</span>
+</div>
+<div class="hidden group-hover/node:flex flex-col items-center absolute bottom-9 bg-surface/95 backdrop-blur-md px-3 py-1.5 rounded shadow-lg pointer-events-none min-w-[160px] z-30">
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold uppercase">Destination [End]</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">Laguna de los Tres: 2,140m</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Distance: 21.4 km</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold mt-1 bg-surface-container-lowest/80 px-1 rounded">[End] 2,140m</span>
+</div>
+<!-- Realtime Live Trackers Floating Badge (Bottom-Right overlay) -->
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-lg px-space-md py-space-xs rounded-lg shadow-lg flex items-center gap-space-md z-20">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface uppercase font-bold">14 Live Trackers on Trail</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">3 Search &amp; Rescue Rangers</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-secondary font-label-mono-sm text-label-mono-sm font-semibold rounded">SAFETY GRID SECURE</span>
+</div>
+<!-- Bottom-Left Map Scale Legend -->
+<div class="absolute bottom-4 left-4 bg-surface/85 backdrop-blur-md px-space-sm py-1 rounded flex items-center gap-space-sm z-20">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Scale: 1:25,000</span>
+<div class="w-16 h-1 bg-on-surface-variant relative flex items-center justify-between">
+<div class="w-0.5 h-2 bg-on-surface-variant -top-0.5"></div>
+<div class="w-0.5 h-2 bg-on-surface-variant -top-0.5"></div>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">2 km</span>
+</div>
+</div>
+</div>
+<!-- 6. Surface & Terrain Breakdown + Gear Checklist sidebar (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Terrain Distribution & Notes Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Surface &amp; Terrain Dynamics</span>
+<span class="material-symbols-outlined text-base text-secondary">layers</span>
+</div>
+<!-- Multi-segment progress bar for terrain breakdown -->
+<div class="flex flex-col gap-space-xs">
+<div class="h-3 w-full rounded overflow-hidden flex bg-surface-container-highest">
+<div class="bg-primary h-full w-[42%]" title="42% Rocky scree"></div>
+<div class="bg-secondary h-full w-[35%]" title="35% Alpine singletrack"></div>
+<div class="bg-tertiary h-full w-[23%]" title="23% Glacial moraine"></div>
+</div>
+<div class="grid grid-cols-3 text-center pt-1 font-label-mono-sm text-label-mono-sm">
+<div class="flex flex-col items-center">
+<span class="text-primary font-bold">42% Scree</span>
+<span class="text-on-surface-variant">Loose rock</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-secondary font-bold">35% Singletrack</span>
+<span class="text-on-surface-variant">Forest trail</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-tertiary font-bold">23% Moraine</span>
+<span class="text-on-surface-variant">Ice &amp; Granite</span>
+</div>
+</div>
+</div>
+<!-- Trail Condition Live Feed -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">campaign</span> Ranger Station Notice
+              </span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">14m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High winds exceeding 45km/h reported at final 1.2km moraine ascent. Trekking poles and crampons advised beyond waypoint 04. Water source at Rio Blanco verified 100% active and potable.
+            </p>
+</div>
+<!-- Sun & Twilight Timer -->
+<div class="flex items-center justify-between px-space-xs pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-lg text-primary">wb_twilight</span>
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Sunset Lock</span>
+<span class="font-label-mono text-label-mono text-on-surface font-bold">19:42 UTC-3</span>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm rounded">
+              02h 14m daylight remaining
+            </span>
+</div>
+</div>
+<!-- Alpine Gear Checklist & Readiness Panel -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">Essential Gear Status</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">6/6 VERIFIED</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Microspikes / Crampons</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Packed</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Carbon Trekking Poles</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">In Hand</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-secondary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Emergency Bivy &amp; Satellite Beacon</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Armed</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface">Thermal Shell (3-Layer Gore-Tex)</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-medium">Equipped</span>
+</div>
+</div>
+<!-- In-transit Emergency Hotkey -->
+<div class="mt-auto pt-space-xs">
+<button class="w-full py-2 bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm font-semibold rounded flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-sm">sos</span>
+<span>Trigger Offline Emergency Protocol</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Dynamic Elevation Profile Chart -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg">area_chart</span>
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-bold">Dynamic Elevation Profile (400m to 2,140m ASL)</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Hover profile to scrub telemetry</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono-sm text-label-mono-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Traversed Segment</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface">Remaining Incline</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-error"></span>
+<span class="text-error font-semibold">Max Incline: 28%</span>
+</div>
+</div>
+</div>
+<!-- SVG Area Chart -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg p-space-sm overflow-hidden select-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1000 200">
+<defs>
+<!-- Emerald traversed gradient -->
+<lineargradient id="traversed-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Orange pending gradient -->
+<lineargradient id="pending-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ff5a1f" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#ff5a1f" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Elevation Horizontal Guides -->
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="20" y2="20"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="24">2,140m (Summit)</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="75" y2="75"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="79">1,600m</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="130" y2="130"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="134">1,000m</text>
+<line stroke="#293B36" stroke-dasharray="3,3" stroke-width="0.75" x1="0" x2="1000" y1="185" y2="185"></line>
+<text fill="#ab897f" font-family="JetBrains Mono" font-size="9" x="10" y="189">400m (Base)</text>
+<!-- Traversed Area (0 to 12.3km = 0 to 575 in X) -->
+<path d="M 0,185 L 120,175 L 225,150 L 320,135 L 420,120 L 520,110 L 575,105 L 575,195 L 0,195 Z" fill="url(#traversed-grad)"></path>
+<path d="M 0,185 L 120,175 L 225,150 L 320,135 L 420,120 L 520,110 L 575,105" fill="none" stroke="#4edea3" stroke-width="2.5"></path>
+<!-- Remaining Area (12.3km to 21.4km = 575 to 1000 in X) -->
+<!-- Steep ascent around 800 to 950 (Steepest grade section) -->
+<path d="M 575,105 L 680,95 L 780,80 L 860,35 L 940,22 L 1000,20 L 1000,195 L 575,195 Z" fill="url(#pending-grad)"></path>
+<path d="M 575,105 L 680,95 L 780,80 L 860,35 L 940,22 L 1000,20" fill="none" stroke="#ff5a1f" stroke-dasharray="4,2" stroke-width="2.5"></path>
+<!-- Highlight: Steepest Grade Section Zone (between 780 and 880) -->
+<rect fill="#93000a" fill-opacity="0.12" height="170" rx="4" width="120" x="760" y="25"></rect>
+<line stroke="#ffb4ab" stroke-dasharray="2,2" stroke-width="0.75" x1="820" x2="820" y1="25" y2="195"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="825" y="45">MAX GRADE 28%</text>
+<text fill="#e4beb3" font-family="JetBrains Mono" font-size="8" x="825" y="58">Moraine Push</text>
+<!-- Current Position Scrubber Hairline at 575 (Poincenot Camp) -->
+<line stroke="#dce4e1" stroke-width="1.5" x1="575" x2="575" y1="15" y2="195"></line>
+<circle cx="575" cy="105" fill="#ff5a1f" r="5" stroke="#0d1513" stroke-width="2"></circle>
+<circle cx="575" cy="105" fill="none" opacity="0.6" r="8" stroke="#ff5a1f" stroke-width="1"></circle>
+<!-- Aid Stations / Camp Pins -->
+<!-- Mirador Capri -->
+<circle cx="225" cy="150" fill="#4edea3" r="3"></circle>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="8" x="232" y="153">Mirador Capri (780m)</text>
+<!-- Poincenot -->
+<text fill="#ffb59e" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="582" y="98">YOU ARE HERE (1,120m)</text>
+<!-- Summit Laguna de los Tres -->
+<circle cx="1000" cy="20" fill="#009dd3" r="4"></circle>
+<text fill="#7bd0ff" font-family="JetBrains Mono" font-size="8" x="910" y="16">Laguna Tres (2,140m)</text>
+</svg>
+<!-- Distance X-Axis Ticks -->
+<div class="absolute bottom-1 left-8 right-8 flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant">
+<span>0.0 km</span>
+<span>5.0 km</span>
+<span>10.0 km</span>
+<span class="text-primary font-bold">12.3 km (Current)</span>
+<span>17.0 km</span>
+<span class="text-tertiary font-bold">21.4 km</span>
+</div>
+</div>
+<!-- Elevation Profile Detailed Stat Callouts -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-xs font-label-mono text-label-mono">
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Ascent Rate:</span>
+<span class="text-secondary font-bold">+340 m/h</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Grade at Scrubber:</span>
+<span class="text-primary font-bold">14.2%</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Remaining Climb:</span>
+<span class="text-on-surface font-bold">+1,020 m</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex items-center justify-between">
+<span class="text-on-surface-variant">Est. Summit Arrival:</span>
+<span class="text-tertiary font-bold">17:15 UTC-3</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive 3D Terrain Preview Modal -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md hidden transition-opacity" id="terrain-3d-modal" role="dialog">
+<div class="relative w-full max-w-6xl max-h-[94vh] bg-surface-container-lowest border border-tertiary/30 rounded-2xl shadow-[0_0_60px_rgba(0,157,211,0.25)] flex flex-col overflow-hidden text-on-surface">
+<!-- Top Modal HUD Header Bar -->
+<div class="bg-surface-container-low px-space-md py-space-sm border-b border-surface-container-highest flex items-center justify-between gap-space-sm shrink-0">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#7bd0ff]"></span>
+<span class="font-headline-md text-body-md font-bold tracking-tight uppercase text-on-surface" id="modal-title">3D Terrain Mesh // Patagonian Cordillera Sector 09</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs text-on-surface-variant font-label-mono-sm text-label-mono-sm bg-surface-container px-2 py-0.5 rounded">
+<span class="text-secondary font-semibold">HDOP 0.8m</span>
+<span>• QZSS/Galileo Active</span>
+</div>
+<span class="hidden xl:inline-block px-2 py-0.5 bg-tertiary-container/30 text-tertiary border border-tertiary/30 font-label-mono-sm text-label-mono-sm rounded uppercase">
+          Engine: Tactical Isometric 3D
+        </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline-block text-on-surface-variant font-label-mono-sm text-label-mono-sm mr-2">[ESC to close]</span>
+<button class="px-3 py-1.5 bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface rounded font-label-mono-sm text-label-mono-sm font-semibold flex items-center gap-1 transition-colors" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined text-sm">close</span>
+<span>Close Telemetry</span>
+</button>
+</div>
+</div>
+<!-- Main Modal Body: 3D Viewport + HUD Sidebar -->
+<div class="flex-1 grid grid-cols-1 lg:grid-cols-12 min-h-0 overflow-y-auto lg:overflow-hidden">
+<!-- 3D Canvas Canvas & Overlay HUD (8 Columns) -->
+<div class="lg:col-span-8 bg-[#070e0c] relative flex flex-col min-h-[460px] lg:min-h-[580px] select-none overflow-hidden group">
+<!-- Canvas Viewport HUD Header Pill -->
+<div class="absolute top-3 left-3 z-20 flex items-center gap-2 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-md border border-white/5 shadow-md">
+<span class="material-symbols-outlined text-sm text-secondary">3d_rotation</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold uppercase text-on-surface">Interactive Topo Mesh</span>
+<span class="text-surface-bright">•</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium" id="hud-cam-angle">Pitch: 32° | Yaw: -45°</span>
+</div>
+<!-- 3D Viewport Controls Pill (Zoom, Orbit, Reset) -->
+<div class="absolute top-3 right-3 z-20 flex items-center gap-1 bg-surface/90 backdrop-blur-md p-1 rounded-md border border-white/5 shadow-md">
+<button class="px-2 py-1 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-label-mono-sm text-label-mono-sm flex items-center gap-1 transition-colors" id="btn-zoom-in" title="Zoom In">
+<span class="material-symbols-outlined text-sm">zoom_in</span>
+</button>
+<button class="px-2 py-1 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-label-mono-sm text-label-mono-sm flex items-center gap-1 transition-colors" id="btn-zoom-out" title="Zoom Out">
+<span class="material-symbols-outlined text-sm">zoom_out</span>
+</button>
+<div class="h-3 w-px bg-surface-container-highest mx-0.5"></div>
+<button class="px-2 py-1 bg-surface-container-highest text-secondary rounded font-label-mono-sm text-label-mono-sm flex items-center gap-1 transition-colors" id="btn-auto-orbit" title="Toggle Auto-Rotation">
+<span class="material-symbols-outlined text-sm animate-spin" style="animation-duration: 4s;">sync</span>
+<span class="hidden sm:inline">Auto-Orbit</span>
+</button>
+<button class="px-2 py-1 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-label-mono-sm text-label-mono-sm flex items-center gap-1 transition-colors" id="btn-reset-view" title="Reset Camera Viewpoint">
+<span class="material-symbols-outlined text-sm">recenter</span>
+</button>
+</div>
+<!-- Interactive HTML5 Canvas Render Layer -->
+<canvas class="w-full h-full cursor-grab active:cursor-grabbing block flex-1" id="terrain-canvas"></canvas>
+<!-- Dynamic Floating Telemetry Waypoint Readout Card (Bottom-Left) -->
+<div class="absolute bottom-4 left-4 z-20 bg-surface/90 backdrop-blur-md border border-tertiary/30 rounded-lg p-3 shadow-xl max-w-xs transition-all pointer-events-none" id="waypoint-hud-card">
+<div class="flex items-center justify-between gap-2 pb-1 border-b border-surface-container-highest">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-primary uppercase" id="wp-title">Poincenot Camp (Active)</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold" id="wp-status">LIVE BEACON</span>
+</div>
+<div class="grid grid-cols-2 gap-x-3 gap-y-1.5 pt-2 font-label-mono-sm text-label-mono-sm">
+<div>
+<span class="text-on-surface-variant">Altitude:</span>
+<span class="text-on-surface font-bold ml-1" id="wp-elev">1,120m ASL</span>
+</div>
+<div>
+<span class="text-on-surface-variant">Incline:</span>
+<span class="text-primary font-bold ml-1" id="wp-incline">14.2%</span>
+</div>
+<div>
+<span class="text-on-surface-variant">Air Temp:</span>
+<span class="text-tertiary font-bold ml-1" id="wp-temp">6.4°C</span>
+</div>
+<div>
+<span class="text-on-surface-variant">O2 Sat:</span>
+<span class="text-secondary font-bold ml-1" id="wp-o2">88.5%</span>
+</div>
+</div>
+<div class="mt-2 pt-1 border-t border-surface-container-highest/60 font-label-mono-sm text-[10px] text-on-surface-variant flex items-center justify-between">
+<span id="wp-coords">49°17'12"S 72°58'45"W</span>
+<span class="text-tertiary">Dist: 12.3 km</span>
+</div>
+</div>
+<!-- Mouse Orbit Interaction Tip & Height Scale (Bottom-Right) -->
+<div class="absolute bottom-4 right-4 z-20 flex flex-col items-end gap-1.5 pointer-events-none">
+<div class="flex items-center gap-1.5 bg-surface/85 backdrop-blur-md px-2.5 py-1 rounded text-on-surface-variant font-label-mono-sm text-label-mono-sm border border-white/5">
+<span class="material-symbols-outlined text-xs text-tertiary">pan_tool</span>
+<span>Click &amp; drag to orbit / scroll to zoom</span>
+</div>
+<div class="flex items-center gap-2 bg-surface/85 backdrop-blur-md px-2.5 py-1 rounded text-on-surface-variant font-label-mono-sm text-label-mono-sm border border-white/5">
+<span>Elevation Gradient:</span>
+<span class="w-16 h-2 rounded bg-gradient-to-r from-[#005236] via-[#00a572] to-[#ff5a1f]"></span>
+<span class="text-on-surface font-bold">420m ➔ 2,140m</span>
+</div>
+</div>
+</div>
+<!-- Right HUD Telemetry Sidebar & Control Center (4 Columns) -->
+<div class="lg:col-span-4 bg-surface-container-low border-t lg:border-t-0 lg:border-l border-surface-container-highest p-space-md flex flex-col gap-space-md overflow-y-auto">
+<!-- Waypoint Selector Pills -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold">3D Waypoint Nodes</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">5 Marked</span>
+</div>
+<div class="flex flex-col gap-1.5" id="waypoint-btn-list">
+<button class="w-full p-2 bg-surface-container hover:bg-surface-container-high rounded flex items-center justify-between text-left transition-colors group" data-wpid="0" type="button">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold text-on-surface group-hover:text-secondary">01. Start: El Chaltén</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">420m</span>
+</button>
+<button class="w-full p-2 bg-surface-container hover:bg-surface-container-high rounded flex items-center justify-between text-left transition-colors group" data-wpid="1" type="button">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold text-on-surface group-hover:text-secondary">02. Mirador Capri</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">780m (Passed)</span>
+</button>
+<button class="w-full p-2 bg-surface-container border border-primary/40 rounded flex items-center justify-between text-left transition-colors group" data-wpid="2" type="button">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-primary">03. Poincenot Camp (Live)</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">1,120m</span>
+</button>
+<button class="w-full p-2 bg-surface-container hover:bg-surface-container-high rounded flex items-center justify-between text-left transition-colors group" data-wpid="3" type="button">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold text-on-surface group-hover:text-primary">04. Ridge Pass Step</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">1,840m</span>
+</button>
+<button class="w-full p-2 bg-surface-container hover:bg-surface-container-high rounded flex items-center justify-between text-left transition-colors group" data-wpid="4" type="button">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-semibold text-on-surface group-hover:text-tertiary">05. Laguna de los Tres</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-tertiary">2,140m (Summit)</span>
+</button>
+</div>
+</div>
+<!-- Terrain Dynamics Inspector & Shaders -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">tune</span> Terrain Dynamics Inspector
+            </span>
+</div>
+<!-- Sun Angle / Shadow Simulation Slider -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">wb_sunny</span> Sun Azimuth &amp; Shadow
+              </span>
+<span class="text-primary font-semibold" id="sun-label">Civil Dusk (19:42)</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer" id="slider-sun" max="100" min="0" type="range" value="82"/>
+<div class="flex justify-between font-label-mono-sm text-[10px] text-on-surface-variant px-0.5">
+<span>Dawn (06:00)</span>
+<span>Noon (12:00)</span>
+<span>Dusk (19:42)</span>
+</div>
+</div>
+<!-- Shader & Mesh Feature Toggles -->
+<div class="grid grid-cols-2 gap-2 pt-1 font-label-mono-sm text-label-mono-sm">
+<label class="flex items-center gap-2 p-2 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors">
+<input checked="" class="accent-secondary rounded" id="toggle-wireframe" type="checkbox"/>
+<span class="text-on-surface text-xs">Wireframe Grid</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors">
+<input checked="" class="accent-secondary rounded" id="toggle-shaded" type="checkbox"/>
+<span class="text-on-surface text-xs">Terrain Shading</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors">
+<input checked="" class="accent-secondary rounded" id="toggle-contours" type="checkbox"/>
+<span class="text-on-surface text-xs">Contour Bands</span>
+</label>
+<label class="flex items-center gap-2 p-2 bg-surface-container-high rounded cursor-pointer hover:bg-surface-container-highest transition-colors">
+<input checked="" class="accent-secondary rounded" id="toggle-fog" type="checkbox"/>
+<span class="text-on-surface text-xs">Atmospheric Fog</span>
+</label>
+</div>
+</div>
+<!-- Cross-Section Route Slice Telemetry mini-box -->
+<div class="bg-surface-container p-space-sm rounded-xl flex flex-col gap-space-xs font-label-mono-sm text-label-mono-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-bold uppercase">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">show_chart</span> 3D Path Incline Vector
+            </span>
+<span class="text-secondary font-bold">ALPINE GRADIENT IV</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden flex">
+<div class="bg-secondary h-full w-[45%]" title="Gentle / Moderate: 45%"></div>
+<div class="bg-primary h-full w-[35%]" title="Steep Scree: 35%"></div>
+<div class="bg-error h-full w-[20%]" title="Extreme Moraine: 20%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] pt-1 text-on-surface-variant">
+<span>Peak Slope: <strong class="text-error">28%</strong> at Ridge Step</span>
+<span>Summit Gain: <strong class="text-on-surface">+1,720m</strong></span>
+</div>
+</div>
+<!-- Modal Action Buttons Footer -->
+<div class="mt-auto pt-space-xs flex flex-col gap-2">
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-2.5 bg-surface-container-high hover:bg-surface-container-highest text-secondary rounded font-label-mono-sm text-label-mono-sm font-semibold flex items-center justify-center gap-1.5 transition-colors" id="btn-snap-beacon" type="button">
+<span class="material-symbols-outlined text-sm">my_location</span>
+<span>Snap to Hiker</span>
+</button>
+<button class="py-2 px-2.5 bg-surface-container-high hover:bg-surface-container-highest text-tertiary rounded font-label-mono-sm text-label-mono-sm font-semibold flex items-center justify-center gap-1.5 transition-colors" id="btn-export-mesh" type="button">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export Mesh (.OBJ)</span>
+</button>
+</div>
+<button class="w-full py-2.5 bg-primary-container hover:brightness-110 text-on-primary-container rounded font-label-mono text-label-mono font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary-container/20 transition-all" id="btn-modal-close-main" type="button">
+<span class="material-symbols-outlined text-base">check</span>
+<span>Return to Live 2D Telemetry</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Map Layer Toggles for Interactive Feel
+  const topoBtn = document.getElementById('toggle-topo');
+  const satBtn = document.getElementById('toggle-sat');
+  const threeDBtn = document.getElementById('toggle-3d');
+  const modal3D = document.getElementById('terrain-3d-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const closeModalMainBtn = document.getElementById('btn-modal-close-main');
+
+  if (topoBtn && satBtn) {
+    topoBtn.addEventListener('click', () => {
+      topoBtn.classList.toggle('bg-surface-container-highest');
+      topoBtn.classList.toggle('text-secondary');
+    });
+
+    satBtn.addEventListener('click', () => {
+      satBtn.classList.toggle('bg-surface-container-highest');
+      satBtn.classList.toggle('text-secondary');
+    });
+  }
+
+  // --- Interactive 3D Terrain Preview Modal Engine ---
+  function openTerrainModal() {
+    if (!modal3D) return;
+    modal3D.classList.remove('hidden');
+    initTerrainCanvas();
+    if (threeDBtn) {
+      threeDBtn.classList.add('bg-tertiary/20', 'text-tertiary');
+    }
+  }
+
+  function closeTerrainModal() {
+    if (!modal3D) return;
+    modal3D.classList.add('hidden');
+    if (autoOrbitInterval) {
+      cancelAnimationFrame(autoOrbitInterval);
+      autoOrbitInterval = null;
+    }
+  }
+
+  if (threeDBtn) {
+    threeDBtn.addEventListener('click', openTerrainModal);
+  }
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeTerrainModal);
+  }
+  if (closeModalMainBtn) {
+    closeModalMainBtn.addEventListener('click', closeTerrainModal);
+  }
+
+  // Close with ESC or background click
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal3D && !modal3D.classList.contains('hidden')) {
+      closeTerrainModal();
+    } else if (e.key === '3' && modal3D && modal3D.classList.contains('hidden')) {
+      openTerrainModal();
+    }
+  });
+
+  if (modal3D) {
+    modal3D.addEventListener('click', (e) => {
+      if (e.target === modal3D) {
+        closeTerrainModal();
+      }
+    });
+  }
+
+  // --- HTML5 Canvas Interactive 3D Terrain Renderer ---
+  const canvas = document.getElementById('terrain-canvas');
+  let ctx = canvas ? canvas.getContext('2d') : null;
+
+  // 3D Camera / Orbit State
+  let yaw = -0.75; // radians ~ -43 deg
+  let pitch = 0.55; // radians ~ 31 deg
+  let zoom = 1.05;
+  let isDragging = false;
+  let lastMouseX = 0;
+  let lastMouseY = 0;
+  let autoOrbit = true;
+  let autoOrbitInterval = null;
+
+  // Shader / Render options
+  let showWireframe = true;
+  let showShaded = true;
+  let showContours = true;
+  let showFog = true;
+  let sunAzimuth = 0.82; // 0 to 1
+
+  // Waypoints Database in 3D Grid Space [-1..1]
+  const waypoints = [
+    { id: 0, name: "Start: El Chaltén", elev: "420m ASL", incline: "3.2%", temp: "11.2°C", o2: "96.2%", coords: "49°19'50\"S 72°53'10\"W", dist: "0.0 km", status: "TRAVERSED", gx: -0.68, gz: 0.65, color: "#4edea3" },
+    { id: 1, name: "Mirador Capri", elev: "780m ASL", incline: "8.5%", temp: "9.8°C", o2: "93.4%", coords: "49°18'32\"S 72°55'40\"W", dist: "4.8 km", status: "PASSED", gx: -0.32, gz: 0.28, color: "#4edea3" },
+    { id: 2, name: "Poincenot Camp (Active)", elev: "1,120m ASL", incline: "14.2%", temp: "6.4°C", o2: "88.5%", coords: "49°17'12\"S 72°58'45\"W", dist: "12.3 km", status: "LIVE BEACON", gx: 0.05, gz: -0.05, color: "#ff5a1f", isLive: true },
+    { id: 3, name: "Ridge Pass Step", elev: "1,840m ASL", incline: "24.6%", temp: "3.1°C", o2: "81.0%", coords: "49°16'28\"S 73°01'15\"W", dist: "17.6 km", status: "PENDING", gx: 0.42, gz: -0.40, color: "#ab897f" },
+    { id: 4, name: "Laguna de los Tres", elev: "2,140m ASL", incline: "28.0%", temp: "0.8°C", o2: "77.5%", coords: "49°15'44\"S 73°02'30\"W", dist: "21.4 km", status: "DESTINATION", gx: 0.68, gz: -0.62, color: "#7bd0ff" }
+  ];
+
+  let activeWp = waypoints[2];
+
+  // Grid definition
+  const GRID_SIZE = 28; // 28x28 vertices
+  let terrainGrid = [];
+
+  function generateTerrainGrid() {
+    terrainGrid = [];
+    for (let r = 0; r <= GRID_SIZE; r++) {
+      let row = [];
+      let zNorm = (r / GRID_SIZE) * 2 - 1; // -1 to 1
+      for (let c = 0; c <= GRID_SIZE; c++) {
+        let xNorm = (c / GRID_SIZE) * 2 - 1; // -1 to 1
+
+        // Base mountain slope from bottom-left to top-right (Fitz Roy Range)
+        let baseElev = (xNorm - zNorm) * 0.35 + 0.1;
+
+        // Summit spires (Mt Fitz Roy and Poincenot aiguilles) around (0.5, -0.6)
+        let distSummit = Math.hypot(xNorm - 0.55, zNorm + 0.58);
+        let summitSpire = Math.exp(-distSummit * 4.2) * 1.35;
+
+        // Secondary ridge (Sentinel Pass) around (0.1, -0.2)
+        let distRidge = Math.hypot(xNorm - 0.1, zNorm + 0.15);
+        let ridge = Math.exp(-distRidge * 3.5) * 0.65;
+
+        // Valley lake depression (Laguna de los Tres) around (0.65, -0.4)
+        let distLake = Math.hypot(xNorm - 0.68, zNorm + 0.38);
+        let lakeDip = Math.exp(-distLake * 6.0) * -0.22;
+
+        // Rough terrain harmonics
+        let noise = Math.sin(xNorm * 7.5) * Math.cos(zNorm * 7.5) * 0.08 +
+                    Math.sin(xNorm * 15.0 + zNorm * 11.0) * 0.035;
+
+        let height = Math.max(0.05, baseElev + summitSpire + ridge + lakeDip + noise);
+        row.push({ x: xNorm, z: zNorm, y: height });
+      }
+      terrainGrid.push(row);
+    }
+  }
+
+  function getTerrainHeightAt(xNorm, zNorm) {
+    let r = Math.min(GRID_SIZE - 1, Math.max(0, Math.floor(((zNorm + 1) / 2) * GRID_SIZE)));
+    let c = Math.min(GRID_SIZE - 1, Math.max(0, Math.floor(((xNorm + 1) / 2) * GRID_SIZE)));
+    return terrainGrid[r] && terrainGrid[r][c] ? terrainGrid[r][c].y : 0.4;
+  }
+
+  function project3D(x, y, z, width, height) {
+    // Rotate around Y (Yaw)
+    let cosY = Math.cos(yaw);
+    let sinY = Math.sin(yaw);
+    let x1 = x * cosY - z * sinY;
+    let z1 = x * sinY + z * cosY;
+
+    // Rotate around X (Pitch)
+    let cosP = Math.cos(pitch);
+    let sinP = Math.sin(pitch);
+    let y2 = y * cosP - z1 * sinP;
+    let z2 = y * sinP + z1 * cosP;
+
+    // Perspective isometric projection
+    let scale = (width * 0.42 * zoom) / (z2 + 2.4);
+    let px = width / 2 + x1 * scale;
+    let py = height / 2 - y2 * scale + height * 0.1;
+
+    return { x: px, y: py, depth: z2 };
+  }
+
+  function drawTerrain() {
+    if (!canvas || !ctx || modal3D.classList.contains('hidden')) return;
+
+    const rect = canvas.getBoundingClientRect();
+    if (canvas.width !== rect.width || canvas.height !== rect.height) {
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    }
+
+    const W = canvas.width;
+    const H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    // Subtle tactical background star/grid dots
+    ctx.strokeStyle = "rgba(41, 59, 54, 0.4)";
+    ctx.lineWidth = 0.5;
+    const step = 60;
+    for (let x = 0; x < W; x += step) {
+      for (let y = 0; y < H; y += step) {
+        ctx.fillStyle = "rgba(78, 222, 163, 0.12)";
+        ctx.fillRect(x, y, 1.5, 1.5);
+      }
+    }
+
+    // Light direction vector based on sunAzimuth
+    let sunAngle = (sunAzimuth - 0.5) * Math.PI;
+    let lx = Math.cos(sunAngle);
+    let ly = Math.sin(pitch) * 0.8 + 0.4;
+    let lz = Math.sin(sunAngle);
+    let lLen = Math.hypot(lx, ly, lz);
+    lx /= lLen; ly /= lLen; lz /= lLen;
+
+    // Collect and sort polygons for depth painters algorithm
+    let quads = [];
+    for (let r = 0; r < GRID_SIZE; r++) {
+      for (let c = 0; c < GRID_SIZE; c++) {
+        let v00 = terrainGrid[r][c];
+        let v10 = terrainGrid[r + 1][c];
+        let v11 = terrainGrid[r + 1][c + 1];
+        let v01 = terrainGrid[r][c + 1];
+
+        let p00 = project3D(v00.x, v00.y, v00.z, W, H);
+        let p10 = project3D(v10.x, v10.y, v10.z, W, H);
+        let p11 = project3D(v11.x, v11.y, v11.z, W, H);
+        let p01 = project3D(v01.x, v01.y, v01.z, W, H);
+
+        let avgDepth = (p00.depth + p10.depth + p11.depth + p01.depth) / 4;
+        let avgHeight = (v00.y + v10.y + v11.y + v01.y) / 4;
+
+        // Approximate normal for lighting
+        let nx = (v00.y - v01.y) * 2;
+        let ny = 0.35;
+        let nz = (v00.y - v10.y) * 2;
+        let nLen = Math.hypot(nx, ny, nz) || 1;
+        nx /= nLen; ny /= nLen; nz /= nLen;
+        let diffuse = Math.max(0.12, (nx * lx + ny * ly + nz * lz));
+
+        quads.push({
+          pts: [p00, p10, p11, p01],
+          depth: avgDepth,
+          height: avgHeight,
+          light: diffuse,
+          r: r,
+          c: c
+        });
+      }
+    }
+
+    // Sort by depth back-to-front
+    quads.sort((a, b) => b.depth - a.depth);
+
+    // Draw terrain faces
+    for (let q of quads) {
+      ctx.beginPath();
+      ctx.moveTo(q.pts[0].x, q.pts[0].y);
+      ctx.lineTo(q.pts[1].x, q.pts[1].y);
+      ctx.lineTo(q.pts[2].x, q.pts[2].y);
+      ctx.lineTo(q.pts[3].x, q.pts[3].y);
+      ctx.closePath();
+
+      if (showShaded) {
+        // Gradient color from valley emerald -> scree stone -> summit peak orange
+        let normH = Math.min(1.2, Math.max(0, q.height));
+        let baseR, baseG, baseB;
+        if (normH < 0.4) {
+          // Deep emerald valley
+          baseR = 10; baseG = 45; baseB = 34;
+        } else if (normH < 0.8) {
+          // Alpine slate / scree
+          baseR = 35; baseG = 58; baseB = 52;
+        } else if (normH < 1.1) {
+          // High rock ridge
+          baseR = 85; baseG = 65; baseB = 50;
+        } else {
+          // Summit needle orange accent
+          baseR = 210; baseG = 85; baseB = 40;
+        }
+
+        let litR = Math.floor(baseR * q.light * 1.6);
+        let litG = Math.floor(baseG * q.light * 1.6);
+        let litB = Math.floor(baseB * q.light * 1.6);
+        let alpha = showFog ? Math.max(0.4, Math.min(0.96, 1.3 - (q.depth + 1.2) * 0.3)) : 0.95;
+
+        ctx.fillStyle = `rgba(${litR}, ${litG}, ${litB}, ${alpha})`;
+        ctx.fill();
+      }
+
+      if (showWireframe) {
+        let wireAlpha = 0.22;
+        if (showContours && Math.abs((q.height * 10) % 1) < 0.25) {
+          // Highlight contour band
+          ctx.strokeStyle = `rgba(123, 208, 255, 0.45)`;
+          ctx.lineWidth = 1.0;
+        } else {
+          ctx.strokeStyle = `rgba(78, 222, 163, ${wireAlpha})`;
+          ctx.lineWidth = 0.5;
+        }
+        ctx.stroke();
+      }
+    }
+
+    // Draw 3D Route Trail Trace on the mountain mesh
+    let routeNodes = [
+      { gx: -0.68, gz: 0.65 },
+      { gx: -0.52, gz: 0.48 },
+      { gx: -0.32, gz: 0.28 },
+      { gx: -0.12, gz: 0.12 },
+      { gx: 0.05, gz: -0.05 },
+      { gx: 0.24, gz: -0.22 },
+      { gx: 0.42, gz: -0.40 },
+      { gx: 0.55, gz: -0.52 },
+      { gx: 0.68, gz: -0.62 }
+    ];
+
+    ctx.beginPath();
+    for (let i = 0; i < routeNodes.length; i++) {
+      let rNode = routeNodes[i];
+      let h = getTerrainHeightAt(rNode.gx, rNode.gz) + 0.03;
+      let pt = project3D(rNode.gx, h, rNode.gz, W, H);
+      if (i === 0) ctx.moveTo(pt.x, pt.y);
+      else ctx.lineTo(pt.x, pt.y);
+    }
+    // Glow underlay
+    ctx.strokeStyle = "rgba(255, 90, 31, 0.35)";
+    ctx.lineWidth = 6;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.stroke();
+
+    // Main route vector (completed emerald, pending dash orange)
+    ctx.beginPath();
+    for (let i = 0; i <= 4; i++) {
+      let rNode = routeNodes[i];
+      let h = getTerrainHeightAt(rNode.gx, rNode.gz) + 0.03;
+      let pt = project3D(rNode.gx, h, rNode.gz, W, H);
+      if (i === 0) ctx.moveTo(pt.x, pt.y);
+      else ctx.lineTo(pt.x, pt.y);
+    }
+    ctx.strokeStyle = "#4edea3";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Remaining segment
+    ctx.beginPath();
+    for (let i = 4; i < routeNodes.length; i++) {
+      let rNode = routeNodes[i];
+      let h = getTerrainHeightAt(rNode.gx, rNode.gz) + 0.03;
+      let pt = project3D(rNode.gx, h, rNode.gz, W, H);
+      if (i === 4) ctx.moveTo(pt.x, pt.y);
+      else ctx.lineTo(pt.x, pt.y);
+    }
+    ctx.strokeStyle = "#ff5a1f";
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([6, 3]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Draw 3D Waypoint Markers with vertical stems
+    let now = Date.now() * 0.003;
+    for (let wp of waypoints) {
+      let th = getTerrainHeightAt(wp.gx, wp.gz);
+      let groundPt = project3D(wp.gx, th, wp.gz, W, H);
+      // Floating marker height above surface
+      let stemHeight = 0.22;
+      let floatPt = project3D(wp.gx, th + stemHeight, wp.gz, W, H);
+
+      // Vertical elevation stem
+      ctx.beginPath();
+      ctx.moveTo(groundPt.x, groundPt.y);
+      ctx.lineTo(floatPt.x, floatPt.y);
+      ctx.strokeStyle = wp.color || "#4edea3";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([2, 2]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Ground anchor point
+      ctx.beginPath();
+      ctx.arc(groundPt.x, groundPt.y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = wp.color || "#4edea3";
+      ctx.fill();
+
+      // Floating Marker Pin
+      let isActive = activeWp && activeWp.id === wp.id;
+      let pulse = wp.isLive ? Math.sin(now * 3) * 3 : 0;
+      let r = isActive ? 8 + pulse : 6;
+
+      ctx.beginPath();
+      ctx.arc(floatPt.x, floatPt.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = wp.color;
+      ctx.shadowColor = wp.color;
+      ctx.shadowBlur = isActive ? 16 : 8;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      ctx.strokeStyle = "#08100e";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Label billboard
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 10px 'JetBrains Mono', monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(wp.name.split(':')[0], floatPt.x, floatPt.y - 12);
+    }
+
+    // Update HUD camera readout
+    let pitchDeg = Math.round((pitch * 180) / Math.PI);
+    let yawDeg = Math.round((yaw * 180) / Math.PI) % 360;
+    const hudAngle = document.getElementById('hud-cam-angle');
+    if (hudAngle) {
+      hudAngle.textContent = `Pitch: ${pitchDeg}° | Yaw: ${yawDeg}° | Zoom: ${(zoom * 100).toFixed(0)}%`;
+    }
+  }
+
+  function updateWaypointHUD(wp) {
+    if (!wp) return;
+    activeWp = wp;
+    const titleEl = document.getElementById('wp-title');
+    const statusEl = document.getElementById('wp-status');
+    const elevEl = document.getElementById('wp-elev');
+    const inclineEl = document.getElementById('wp-incline');
+    const tempEl = document.getElementById('wp-temp');
+    const o2El = document.getElementById('wp-o2');
+    const coordsEl = document.getElementById('wp-coords');
+
+    if (titleEl) titleEl.textContent = wp.name;
+    if (statusEl) {
+      statusEl.textContent = wp.status;
+      statusEl.style.color = wp.color;
+    }
+    if (elevEl) elevEl.textContent = wp.elev;
+    if (inclineEl) inclineEl.textContent = wp.incline;
+    if (tempEl) tempEl.textContent = wp.temp;
+    if (o2El) o2El.textContent = wp.o2;
+    if (coordsEl) coordsEl.textContent = `${wp.coords} • Dist: ${wp.dist}`;
+
+    // Highlight button in list
+    const wpBtns = document.querySelectorAll('#waypoint-btn-list button');
+    wpBtns.forEach((btn) => {
+      let id = parseInt(btn.getAttribute('data-wpid'), 10);
+      if (id === wp.id) {
+        btn.classList.add('border', 'border-primary/50', 'bg-surface-container-high');
+      } else {
+        btn.classList.remove('border', 'border-primary/50', 'bg-surface-container-high');
+      }
+    });
+
+    drawTerrain();
+  }
+
+  function initTerrainCanvas() {
+    if (!canvas) return;
+    generateTerrainGrid();
+
+    // Mouse drag orbit controls
+    canvas.onmousedown = (e) => {
+      isDragging = true;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+      autoOrbit = false;
+      const orbitBtn = document.getElementById('btn-auto-orbit');
+      if (orbitBtn) orbitBtn.classList.remove('text-secondary', 'bg-surface-container-highest');
+    };
+
+    window.onmousemove = (e) => {
+      if (!isDragging) return;
+      let dx = e.clientX - lastMouseX;
+      let dy = e.clientY - lastMouseY;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+
+      yaw += dx * 0.008;
+      pitch = Math.max(0.15, Math.min(1.2, pitch + dy * 0.008));
+      drawTerrain();
+    };
+
+    window.onmouseup = () => {
+      isDragging = false;
+    };
+
+    // Mouse wheel zoom
+    canvas.onwheel = (e) => {
+      e.preventDefault();
+      zoom = Math.max(0.5, Math.min(2.4, zoom - e.deltaY * 0.0015));
+      drawTerrain();
+    };
+
+    // Canvas click to select waypoint
+    canvas.onclick = (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const clickY = e.clientY - rect.top;
+
+      let closestWp = null;
+      let closestDist = 24; // 24px threshold
+
+      for (let wp of waypoints) {
+        let th = getTerrainHeightAt(wp.gx, wp.gz);
+        let pt = project3D(wp.gx, th + 0.22, wp.gz, canvas.width, canvas.height);
+        let d = Math.hypot(clickX - pt.x, clickY - pt.y);
+        if (d < closestDist) {
+          closestDist = d;
+          closestWp = wp;
+        }
+      }
+
+      if (closestWp) {
+        updateWaypointHUD(closestWp);
+      }
+    };
+
+    // Sidebar waypoint buttons
+    const wpBtns = document.querySelectorAll('#waypoint-btn-list button');
+    wpBtns.forEach((btn) => {
+      btn.onclick = () => {
+        let id = parseInt(btn.getAttribute('data-wpid'), 10);
+        let found = waypoints.find(w => w.id === id);
+        if (found) {
+          updateWaypointHUD(found);
+        }
+      };
+    });
+
+    // Sun Slider
+    const sunSlider = document.getElementById('slider-sun');
+    const sunLabel = document.getElementById('sun-label');
+    if (sunSlider) {
+      sunSlider.oninput = (e) => {
+        let val = e.target.value / 100;
+        sunAzimuth = val;
+        if (sunLabel) {
+          if (val < 0.3) sunLabel.textContent = `Dawn Horizon (${(6 + val * 10).toFixed(0)}:00)`;
+          else if (val < 0.7) sunLabel.textContent = `Noon Overhead (${(11 + val * 4).toFixed(0)}:00)`;
+          else sunLabel.textContent = `Civil Dusk (19:42)`;
+        }
+        drawTerrain();
+      };
+    }
+
+    // Toggle Checkboxes
+    const cbWire = document.getElementById('toggle-wireframe');
+    const cbShaded = document.getElementById('toggle-shaded');
+    const cbContours = document.getElementById('toggle-contours');
+    const cbFog = document.getElementById('toggle-fog');
+
+    if (cbWire) cbWire.onchange = (e) => { showWireframe = e.target.checked; drawTerrain(); };
+    if (cbShaded) cbShaded.onchange = (e) => { showShaded = e.target.checked; drawTerrain(); };
+    if (cbContours) cbContours.onchange = (e) => { showContours = e.target.checked; drawTerrain(); };
+    if (cbFog) cbFog.onchange = (e) => { showFog = e.target.checked; drawTerrain(); };
+
+    // Zoom Buttons
+    const btnIn = document.getElementById('btn-zoom-in');
+    const btnOut = document.getElementById('btn-zoom-out');
+    if (btnIn) btnIn.onclick = () => { zoom = Math.min(2.4, zoom + 0.15); drawTerrain(); };
+    if (btnOut) btnOut.onclick = () => { zoom = Math.max(0.5, zoom - 0.15); drawTerrain(); };
+
+    // Reset view
+    const btnReset = document.getElementById('btn-reset-view');
+    if (btnReset) btnReset.onclick = () => {
+      yaw = -0.75;
+      pitch = 0.55;
+      zoom = 1.05;
+      drawTerrain();
+    };
+
+    // Auto-Orbit toggle
+    const btnOrbit = document.getElementById('btn-auto-orbit');
+    if (btnOrbit) {
+      btnOrbit.onclick = () => {
+        autoOrbit = !autoOrbit;
+        btnOrbit.classList.toggle('text-secondary', autoOrbit);
+        btnOrbit.classList.toggle('bg-surface-container-highest', autoOrbit);
+      };
+    }
+
+    // Snap to Beacon
+    const btnSnap = document.getElementById('btn-snap-beacon');
+    if (btnSnap) {
+      btnSnap.onclick = () => {
+        updateWaypointHUD(waypoints[2]);
+        yaw = -0.75;
+        pitch = 0.52;
+        zoom = 1.25;
+        drawTerrain();
+      };
+    }
+
+    // Export OBJ mock trigger
+    const btnExport = document.getElementById('btn-export-mesh');
+    if (btnExport) {
+      btnExport.onclick = () => {
+        btnExport.innerHTML = '<span class="material-symbols-outlined text-sm animate-spin">sync</span> Generating .OBJ';
+        setTimeout(() => {
+          btnExport.innerHTML = '<span class="material-symbols-outlined text-sm text-secondary">check</span> Export Ready';
+          setTimeout(() => {
+            btnExport.innerHTML = '<span class="material-symbols-outlined text-sm">download</span><span>Export Mesh (.OBJ)</span>';
+          }, 2000);
+        }, 800);
+      };
+    }
+
+    // Auto-orbit loop
+    function loop() {
+      if (!modal3D.classList.contains('hidden')) {
+        if (autoOrbit && !isDragging) {
+          yaw += 0.0035;
+        }
+        drawTerrain();
+      }
+      autoOrbitInterval = requestAnimationFrame(loop);
+    }
+    if (autoOrbitInterval) cancelAnimationFrame(autoOrbitInterval);
+    autoOrbitInterval = requestAnimationFrame(loop);
+
+    updateWaypointHUD(waypoints[2]);
+  }
+</script></main></div></body></html>

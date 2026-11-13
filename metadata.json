@@ -1,0 +1,6 @@
+{
+  "name": "PeakTrack",
+  "description": "Alpine trail telemetry, interactive topographic mapping, and 3D terrain mesh visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
